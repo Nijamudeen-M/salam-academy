@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <style>
+        /* Style the Google Translate dropdown */
+        #google_translate_element select.goog-te-combo {
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            font-size: 16px;
+            padding: 8px;
+            border: 2px solid #0056b3;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        /* Change color on hover */
+        #google_translate_element select.goog-te-combo:hover {
+            background-color: #0056b3;
+        }
+        /* Hide the Google Translate banner */
+.goog-logo-link, .goog-te-gadget span {
+    display: none !important;
+}
 
+
+
+ /* Hide "Powered by Google Translate" */
+ .goog-te-gadget {
+    color: transparent !important;
+    font-size: 0px;
+}
+
+    </style>
+    
+<body>
+
+<h1>My Web Page</h1>
+
+<p>Hello everybody!</p>
+
+<p>Translate this page:</p>
+
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            { pageLanguage: 'en', includedLanguages: 'en,hi,ta' },
+            'google_translate_element'
+        );
+    }
+ 
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<p>You can translate the content of this page by selecting a language in the select box.</p>
+
+</body>
+</html>
